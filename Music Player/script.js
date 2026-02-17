@@ -9,18 +9,21 @@ const progressContainer = document.getElementById("progress-container");
 const title = document.getElementById("title");
 const currentTimeEl = document.getElementById("current-time");
 const durationEl = document.getElementById("duration");
+const cover = document.getElementById("cover");
 
 
 const song = [
-    {name:"song1", title:"Koi Mil Gaya"},
-    {name:"song2", title:"Chaand Tare"},
-    {name:"song3", title:"Besabriya"}
+    {name:"song1", title:"Koi Mil Gaya", artist:"by Udit Narayan and K. S. Chithra", poster:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRva6ZzeXzcoFj5R48vVMV1hnFjIAGMvfp_Kw&s"},
+    {name:"song2", title:"Chaand Tare", artist:"by Abhijeet Bhattacharya", poster:"https://www.makemykaraoke.com/images/detailed/54/Yes_Boss-Chaand_Taare_Tod_Laaun.jpg"},
+    {name:"song3", title:"Besabriya", artist:"by Armaan Malik", poster:"https://c.saavncdn.com/569/M-S-Dhoni-The-Untold-Story-3-Hindi-2016-500x500.jpg"}
 ];
 
 let songIndex = 0;
 
 function loadSong(song){
     title.innerText = song.title;
+    artist.innerText = song.artist;
+    cover.src = song.poster;
     audio.src = `songs/${song.name}.mp3`;
 }
 
