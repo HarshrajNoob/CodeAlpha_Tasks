@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Name of Website -->
+    <h1 class="title">My Image Gallery</h1>
+
+    <!-- Navigation Bar For Image Gallery -->
+     <nav class="filter-nav">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn " data-filter="flower">Flower</button>
+        <button class="filter-btn " data-filter="birds">Birds</button>
+        <button class="filter-btn " data-filter="fruits">Fruits</button>
+     </nav>
+
+    <!-- Section of Image Gallery-->
+    <section class="gallery">
+        <img src="images/img1.jpg" alt="Gallery Image 1" data-category="flower">
+        <img src="images/img2.jpg" alt="Gallery Image 2" data-category="flower">
+        <img src="images/img3.jpg" alt="Gallery Image 3" data-category="flower">
+        <img src="images/img4.jpg" alt="Gallery Image 4" data-category="birds">
+        <img src="images/img5.jpg" alt="Gallery Image 5" data-category="birds">
+        <img src="images/img6.jpg" alt="Gallery Image 6" data-category="birds">
+        <img src="images/img7.jpg" alt="Gallery Image 7" data-category="fruits">
+        <img src="images/img8.jpg" alt="Gallery Image 8" data-category="fruits">
+        <img src="images/img9.jpg" alt="Gallery Image 9" data-category="fruits">
+    </section>
+
+    <!-- Modal HTML Code (Hidden by Default)-->
+    <div class="modal" id="modal">
+        <span class="close">&times;</span>
+        <img class="modal-img" id="modalImg">
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>
